@@ -281,3 +281,49 @@ To overcome these challenges and ensure effective prompt chaining, consider the 
 - **Recap and redirect**: If you notice an AI tool is deviating from the original goal, provide a recap of the essential information and redirect it back to the main objective.
 
 By employing these strategies, you can generate more accurate and relevant output from an AI tool. As with any other prompting technique, prompt chaining relies on finding the right balance between providing necessary context and avoiding information overload.
+
+## Bias, drift, and knowledge cutoff
+
+### Understanding data bias
+
+Data bias can be a foundational challenge for many AI tools. It occurs when the data used to train an AI model is skewed, incomplete, or reflects historical or societal biases. Because the tool's output is a direct reflection of its training data, it can learn and even amplify these biases in its responses.
+
+As a responsible user, your role is to guide the tool toward a fair and impartial output. Here are a few ways you can mitigate bias when using AI tools:
+
+- Be specific about the output you want from your prompt.
+
+- Include important context about your intended audience and their needs.
+
+- Provide fair and balanced references for the tool to follow.
+
+- Use follow-up prompts to correct any output that seems biased or inaccurate.
+
+### The constraint of knowledge cutoff
+
+**Knowledge cutoff** is the concept that an AI model is trained at a specific point in time. AI models have a knowledge cutoff because their core knowledge is based on the data they were trained on.
+
+You might notice that some AI tools can provide information about very recent events. Some may do this by performing a live web search to find current information and supplement their answer. It's helpful to think of this as the difference between what the model knows from its training versus what it can *look up* in the moment. The model's core knowledge isn't being updated, which is why the concept of a knowledge cutoff remains a critical limitation to be aware of.
+
+Responsible AI use requires you to verify time-sensitive information. Always use a search engine or other reliable sources to fact-check statistics, news, or any information about recent events.
+
+**Pro Tip**: Some AI tools tell you their knowledge cutoff date if you ask them directly.
+
+### Drift in an AI tool's output
+
+**Drift** is the gradual decline in an AI tool's accuracy and relevance as the real world changes. You might observe drift in two ways:
+
+- **Factual drift**: This is when the AI's becomes less accurate over time because of its knowledge cutoff. For example, an AI's advice on "current fashion trends" may become less useful the further you get from its training date.
+
+- **Behavioral drift**: This refers to changes in an AI tool's behavior over time. As developers update models, you might notice that the tool's formatting, tone, or conversational style changes, even when you use the same prompts.
+
+Here are a few ways to manage and mitigate both kinds of drift:
+
+- **Provide accurate and up-to-date context in your prompts**, especially for topics that change quickly like market trends or technology.
+
+- **Keep chats focused by starting a new conversation for each specific task**. This also helps to reset the context if a conversation becomes too long or the output starts to feel off-topic.
+
+- **Be explicit** with clear and specific instructions in your prompts.
+
+### Being the human-in-the-loop
+
+Being the "human-in-the-loop" means you are always the final judge of an AI's output. This is especially important when using more automated AI assistants or agents. While these tools can handle tasks more independently, they are still subject to the same limitations of bias, knowledge cutoff, and drift. Understanding these limitations is critical for setting up and supervising automated tools responsibly to ensure they continue to operate in a safe and helpful way over time.
