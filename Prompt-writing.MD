@@ -327,3 +327,5 @@ Here are a few ways to manage and mitigate both kinds of drift:
 ### Being the human-in-the-loop
 
 Being the "human-in-the-loop" means you are always the final judge of an AI's output. This is especially important when using more automated AI assistants or agents. While these tools can handle tasks more independently, they are still subject to the same limitations of bias, knowledge cutoff, and drift. Understanding these limitations is critical for setting up and supervising automated tools responsibly to ensure they continue to operate in a safe and helpful way over time.
+
+
