@@ -45,3 +45,68 @@ Finally, make sure to review your work in each phase of the analysis. This helps
 ## Key takeaways
 
 The six phases of the data analysis process help answer business challenges, such as understanding how to improve a retirement program. Additionally, iterating on and reviewing your work throughout the data analysis process is critical for obtaining quality results.
+
+## EMC's data analysis process
+
+EMC Corporation's data analytics process is cyclical with six steps:
+
+1. Discovery
+2. Pre-processing data
+3. Model planning
+4. Model building
+5. Communicate results
+6. Operationalize
+
+EMC Corporation is now Dell EMC. This model, created by David Dietrich, reflects the cyclical nature of typical business projects. The phases aren’t static milestones; each step connects and leads to the next, and eventually repeats. Key questions help analysts test whether they have accomplished enough to move forward and ensure that teams have spent enough time on each of the phases and don’t start modeling before the data is ready. It is a little different from the data analysis process on which this program is based on, but it has some core ideas in common: the first phase is interested in discovering and asking questions; data has to be prepared before it can be analyzed and used; and then findings should be shared and acted on.
+
+For more information, refer to this e-book, [https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119183686](Data Science & Big Data Analytics). Select PDF under the section that reads Free Access.
+
+## SAS's iterative process
+
+An iterative data analysis process was created by a company called SAS, a leading data analytics solutions provider. It can be used to produce repeatable, reliable, and predictive results:
+
+1. Ask
+2. Prepare
+3. Explore
+4. Model
+5. Implement
+6. Act
+7. Evaluate
+
+The SAS model emphasizes the cyclical nature of their model by visualizing it as an infinity symbol. Its process has seven steps, many of which mirror the other models, like ask, prepare, model, and act. But this process is also a little different; it includes a step after the act phase designed to help analysts evaluate their solutions and potentially return to the ask phase again.
+
+## Project-based data analytics process
+
+A project-based data analytics process has five simple steps:
+
+1. Identifying the problem
+2. Designing data requirements
+3. Pre-processing data
+4. Performing data analysis
+5. Visualizing data
+
+This data analytics project process was developed by Vignesh Prajapati. It doesn’t include the sixth phase, or the act phase. However, it still covers a lot of the same steps described. It begins with identifying the problem, preparing and processing data before analysis, and ends with data visualization.
+
+For more information, refer to [https://pingax.com/understanding-data-analytics-project-life-cycle/](Understanding the data analytics project life cycle)().
+
+## Big data analytics process
+
+Authors Thomas Erl, Wajid Khattak, and Paul Buhler proposed a big data analytics process in their book, Big Data Fundamentals: Concepts, Drivers & Techniques. Their process suggests phases divided into nine steps:
+
+1. Business case evaluation
+2. Data identification
+3. Data acquisition and filtering
+4. Data extraction
+5. Data validation and cleaning
+6. Data aggregation and representation
+7. Data analysis
+8. Data visualization
+9. Utilization of analysis results
+
+This process appears to have three or four more steps than the previous models. But in reality, they have just broken down what has been referred to as prepare and process into smaller steps. It emphasizes the individual tasks required for gathering, preparing, and cleaning data before the analysis phase.
+
+For more information, refer to [https://www.informit.com/articles/article.aspx?p=2473128&seqNum=11&ranMID=24808](Big Data Adoption and Planning Considerations).
+
+## Key takeaway
+
+From a journey to the pyramids and data in ancient Egypt to now, the way people analyze data has evolved (and continues to do so). The data analysis process is like real life architecture: There are different ways to do things but the same core ideas still appear in each model of the process. Whether you use the structure of this Google Data Analytics Certificate or one of the many other iterations you have learned about, your approach will be effective.
