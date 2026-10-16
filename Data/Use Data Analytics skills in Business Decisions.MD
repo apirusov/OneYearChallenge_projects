@@ -74,3 +74,5 @@ The data strategy you select should be based on the dataset and the deliverables
 ### Key takeaways
 
 Your inherent analytical skills are essential for conducting data analysis and will be even more critical when you combine them with the tools and techniques from this program. Understanding how to use these skills in business scenarios is the first step toward developing them further and using them effectively in your career.
+
+
