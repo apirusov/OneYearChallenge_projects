@@ -1,16 +1,33 @@
 # Basic Concepts
 
 ```mermaid
-flowchart LR
-    Client[Client Request] --> apiGateway{API Gateway}
-    
-    apiGateway --> orderSvc[Order Service]
-    apiGateway --> paymentSvc[Payment Service]
-    apiGateway --> inventorySvc[Inventory Service]
-    
-    orderSvc <--> paymentSvc
-    paymentSvc <--> inventorySvc
-    
-    orderSvc <--> ordersDB[(Orders DB)]
-    paymentSvc <--> paymentsDB[(Payments DB)]
-    inventorySvc <--> inventoryDB[(Inventory DB)]
+graph LR
+    subgraph ClientLayer [Client & Gateway]
+        Client[Client Request] --> apiGateway{API Gateway}
+    end
+
+    subgraph Services [Microservices Column]
+        direction TD
+        orderSvc[Order Service]
+        paymentSvc[Payment Service]
+        inventorySvc[Inventory Service]
+    end
+
+    subgraph Databases [Databases Column]
+        direction TD
+        ordersDB[(Orders DB)]
+        paymentsDB[(Payments DB)]
+        inventoryDB[(Inventory DB)]
+    end
+
+    %% Connections from Gateway to Services
+    apiGateway --> orderSvc
+    apiGateway --> paymentSvc
+    apiGateway --> inventorySvc
+
+    %% Service-to-Database mapping
+    orderSvc <--> ordersDB
+    paymentSvc <--> paymentsDB
+    inventorySvc <--> inventoryDB
+
+
