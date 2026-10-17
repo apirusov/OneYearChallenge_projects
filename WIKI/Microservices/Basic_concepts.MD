@@ -37,6 +37,7 @@ graph LR
 
 Understand the architectural trade-offs
 
+```mermaid
 graph LR
     subgraph Monolith[Monolith]
         direction TD
@@ -61,4 +62,4 @@ graph LR
             paymentSvc[Payment Service] --> paymentDb[(DB)]
         end
     end 
-
+```
