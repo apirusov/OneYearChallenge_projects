@@ -37,40 +37,27 @@ end
 
 Understand the architectural trade-offs
 
-```mermaid
 graph LR
     subgraph Monolith[Monolith]
         direction TD
-        subgraph ui[UI]
-            businesslogic[Business Logic]
-            dataAccess[Data Access]
-        end
-        singleDb[Single DB]
+        ui[UI & Business Logic] --> singleDb[(Single DB)]
     end
 
     subgraph microservices[Microservices]
         direction LR
-        subgraph user
+        
+        subgraph user[User Domain]
             direction TD
-                userSvc[User Service]
-                userDb[DB]
+            userSvc[User Service] --> userDb[(DB)]
         end
 
-        subgraph order
+        subgraph order[Order Domain]
             direction TD
-                orderSvc[Order Service]
-                orderDb[DB]
+            orderSvc[Order Service] --> orderDb[(DB)]
         end
 
-        subgraph payment
+        subgraph payment[Payment Domain]
             direction TD
-                paymentSvc[Payment Service]
-                paymentDb[DB]
+            paymentSvc[Payment Service] --> paymentDb[(DB)]
         end
-    
-    ui --> singleDb
-    userSvc --> userDb
-    orderSvc --> orderDb
-    paymentSvc --> paymentDb
-
-end
+    end
