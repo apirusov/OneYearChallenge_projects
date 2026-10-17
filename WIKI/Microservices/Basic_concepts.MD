@@ -28,8 +28,7 @@ graph LR
     %% Service-to-Database mapping
     orderSvc <--> ordersDB
     paymentSvc <--> paymentsDB
-    inventorySvc <--> inventoryDB
-`EOF`
+    inventorySvc <--> inventoryDB```
 
 ## Microservices Architecture Fundamentals
 
@@ -60,5 +59,5 @@ graph LR
             direction TD
             paymentSvc[Payment Service] --> paymentDb[(DB)]
         end
-    end
-EOF
+    end```
+
