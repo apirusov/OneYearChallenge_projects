@@ -11,6 +11,6 @@ flowchart LR
     orderSvc <--> paymentSvc
     paymentSvc <--> inventorySvc
     
-    orderSvc --> ordersDB[(Orders DB)]
-    paymentSvc --> paymentsDB[(Payments DB)]
-    inventorySvc --> inventoryDB[(Inventory DB)]
+    orderSvc <--> ordersDB[(Orders DB)]
+    paymentSvc <--> paymentsDB[(Payments DB)]
+    inventorySvc <--> inventoryDB[(Inventory DB)]
