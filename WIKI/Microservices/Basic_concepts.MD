@@ -29,6 +29,7 @@ graph LR
     orderSvc <--> ordersDB
     paymentSvc <--> paymentsDB
     inventorySvc <--> inventoryDB
+EOF
 
 ## Microservices Architecture Fundamentals
 
@@ -60,3 +61,4 @@ graph LR
             paymentSvc[Payment Service] --> paymentDb[(DB)]
         end
     end
+EOF
