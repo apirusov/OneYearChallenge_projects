@@ -29,7 +29,7 @@ graph LR
     orderSvc <--> ordersDB
     paymentSvc <--> paymentsDB
     inventorySvc <--> inventoryDB
-EOF
+`EOF`
 
 ## Microservices Architecture Fundamentals
 
