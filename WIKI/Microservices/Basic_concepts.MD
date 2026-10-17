@@ -29,6 +29,7 @@ graph LR
     orderSvc <--> ordersDB
     paymentSvc <--> paymentsDB
     inventorySvc <--> inventoryDB
+end 
 
 ## Microservices Architecture Fundamentals
 
@@ -72,3 +73,4 @@ graph LR
     orderSvc --> orderDb
     paymentSvc --> paymentDb
 
+end
