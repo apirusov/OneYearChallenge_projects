@@ -1,4 +1,4 @@
-# Basic Concepts
+# Basic Questions to ask before building Microservice
 
 ```mermaid
 graph LR
@@ -6,14 +6,14 @@ graph LR
         Client[Client Request] --> apiGateway{API Gateway}
     end
 
-    subgraph Services [Microservices Column]
+    subgraph Services [Microservices]
         direction TD
         orderSvc[Order Service]
         paymentSvc[Payment Service]
         inventorySvc[Inventory Service]
     end
 
-    subgraph Databases [Databases Column]
+    subgraph Databases [Databases]
         direction TD
         ordersDB[(Orders DB)]
         paymentsDB[(Payments DB)]
@@ -30,4 +30,45 @@ graph LR
     paymentSvc <--> paymentsDB
     inventorySvc <--> inventoryDB
 
+## Microservices Architecture Fundamentals
+
+### Monolith vs Microservices
+
+Understand the architectural trade-offs
+
+```mermaid
+graph LR
+    subgraph Monolith[Monolith]
+        direction TD
+        subgraph ui[UI]
+            businesslogic[Business Logic]
+            dataAccess[Data Access]
+        end
+        singleDb[Single DB]
+    end
+
+    subgraph microservices[Microservices]
+        direction LR
+        subgraph user
+            direction TD
+                userSvc[User Service]
+                userDb[DB]
+        end
+
+        subgraph order
+            direction TD
+                orderSvc[Order Service]
+                orderDb[DB]
+        end
+
+        subgraph payment
+            direction TD
+                paymentSvc[Payment Service]
+                paymentDb[DB]
+        end
+    
+    ui --> singleDb
+    userSvc --> userDb
+    orderSvc --> orderDb
+    paymentSvc --> paymentDb
 
