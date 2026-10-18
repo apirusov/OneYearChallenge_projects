@@ -39,10 +39,12 @@ Understand the architectural trade-offs
 
 ```mermaid
 graph LR
-    subgraph Monolith[Monolith]
+    ubgraph Monolith[Monolith Application]
         direction TD
-        ui[UI Layer] --> businessLogic[Business Logic]
-        businessLogic --> dataAccess[Data Access]
+        ui[UI]
+        businessLogic[Business Logic]
+        dataAccess[Data Access]
+        
         dataAccess --> singleDb[(Single DB)]
     end
 
