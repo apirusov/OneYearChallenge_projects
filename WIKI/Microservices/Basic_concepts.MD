@@ -1,6 +1,5 @@
 # Basic Questions to ask before building Microservice
 
-```markdown
 ```mermaid
 graph LR
     subgraph ClientLayer [Client & Gateway]
@@ -30,7 +29,6 @@ graph LR
     orderSvc <--> ordersDB
     paymentSvc <--> paymentsDB
     inventorySvc <--> inventoryDB
-```
 ```
 
 ## Microservices Architecture Fundamentals
