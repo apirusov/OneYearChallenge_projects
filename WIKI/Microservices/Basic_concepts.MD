@@ -33,13 +33,13 @@ graph LR
 
 ## Microservices Architecture Fundamentals
 
-### Monolith vs Microservices
+### 1. Monolith vs Microservices
 
 Understand the architectural trade-offs
 
 ```mermaid
 graph LR
-subgraph monvsmcrsc
+subgraph monvsmcrsc[Monolith vs Microservices]
 direction LR
     subgraph Monolith[Monolith Application]
         direction TD
@@ -71,4 +71,15 @@ direction LR
         end
     end 
 end
+```
+
+### 2. Service Boundaries
+
+How do you decide what belongs to each service?
+
+```mermaid
+graph LR
+    ecApp[E-commerce Application] --> usrSrc[User Service]
+    ecApp[E-commerce Application] --> ordSrc[Order Service]
+    ecApp[E-commerce Application] --> paySrc[Payment Service]
 ```
