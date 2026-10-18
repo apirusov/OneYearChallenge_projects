@@ -89,6 +89,6 @@ graph LR
 How do you minimize dependencies between services?
 
 ```mermaid
-    direction LR
+graph LR
     src a[Service A] <..> src b[Service B] : Minimal dependency
 ```
