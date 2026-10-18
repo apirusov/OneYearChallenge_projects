@@ -41,7 +41,10 @@ Understand the architectural trade-offs
 graph LR
     subgraph Monolith[Monolith]
         direction TD
-        ui[UI & Business Logic] --> singleDb[(Single DB)]
+        class ui
+        class ui: businesslogic[Business Logic]
+        class ui: dataAccess[Data Access]
+        class ui --> singleDb[(Single DB)]
     end
 
     subgraph microservices[Microservices]
