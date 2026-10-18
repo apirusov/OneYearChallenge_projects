@@ -39,6 +39,8 @@ Understand the architectural trade-offs
 
 ```mermaid
 graph LR
+subgraph monvsmcrsc
+direction LR
     subgraph Monolith[Monolith Application]
         direction TD
         subgraph ui[UI]
@@ -68,4 +70,5 @@ graph LR
             paymentSvc[Payment Service] --> paymentDb[(DB)]
         end
     end 
+end
 ```
