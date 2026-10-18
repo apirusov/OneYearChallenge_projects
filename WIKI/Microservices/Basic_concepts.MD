@@ -31,6 +31,7 @@ graph LR
     paymentSvc <--> paymentsDB
     inventorySvc <--> inventoryDB
 ```
+```
 
 ## Microservices Architecture Fundamentals
 
