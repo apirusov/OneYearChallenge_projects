@@ -90,5 +90,5 @@ How do you minimize dependencies between services?
 
 ```mermaid
 graph LR
-    srca[Service A] <--> srcb[Service B] : Minimal dependency
+    srca[Service A] <-.->|Minimal dependency| srcb[Service B]
 ```
