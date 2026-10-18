@@ -3,21 +3,21 @@
 ```mermaid
 graph LR
     subgraph ClientLayer [Client & Gateway]
-        Client[fa:fa-laptop Client Request] --> apiGateway{fa:fa-network-wired API Gateway}
+        Client["💻 Client Request"] --> apiGateway{"🌐 API Gateway"}
     end
 
     subgraph Services [Microservices]
         direction TD
-        orderSvc[fa:fa-cart-shopping Order Service]
-        paymentSvc[fa:fa-credit-card Payment Service]
-        inventorySvc[fa:fa-cubes Inventory Service]
+        orderSvc["🛒 Order Service"]
+        paymentSvc["💳 Payment Service"]
+        inventorySvc["📦 Inventory Service"]
     end
 
     subgraph Databases [Databases]
         direction TD
-        ordersDB[(fa:fa-database Orders DB)]
-        paymentsDB[(fa:fa-database Payments DB)]
-        inventoryDB[(fa:fa-database Inventory DB)]
+        ordersDB[("🗄️ Orders DB")]
+        paymentsDB[("🗄️ Payments DB")]
+        inventoryDB[("🗄️ Inventory DB")]
     end
 
     %% Connections from Gateway to Services
