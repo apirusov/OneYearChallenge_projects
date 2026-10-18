@@ -29,16 +29,6 @@ graph LR
     orderSvc <--> ordersDB
     paymentSvc <--> paymentsDB
     inventorySvc <--> inventoryDB
-
-    %% Connections from Gateway to Services
-    apiGateway --> orderSvc
-    apiGateway --> paymentSvc
-    apiGateway --> inventorySvc
-
-    %% Service-to-Database mapping
-    orderSvc <--> ordersDB
-    paymentSvc <--> paymentsDB
-    inventorySvc <--> inventoryDB
 ```
 
 ## Microservices Architecture Fundamentals
