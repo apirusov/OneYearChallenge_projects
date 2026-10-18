@@ -79,7 +79,16 @@ How do you decide what belongs to each service?
 
 ```mermaid
 graph LR
-    ecApp[E-commerce Application] --> usrSrc[User Service]
-    ecApp[E-commerce Application] --> ordSrc[Order Service]
-    ecApp[E-commerce Application] --> paySrc[Payment Service]
+    ecApp[E-commerce Application] --> usrSrc["👤User Service(Users, Profiles)"]
+    ecApp[E-commerce Application] --> ordSrc["🛒Order Service(Orders, Cart)"]
+    ecApp[E-commerce Application] --> paySrc["💳Payment Service(Payments, Refunds)"]
+```
+
+### 3. Loose Coupling
+
+How do you minimize dependencies between services?
+
+```mermaid
+    direction LR
+    src a[Service A] <..> src b[Service B] : Minimal dependency
 ```
