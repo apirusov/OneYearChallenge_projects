@@ -1,23 +1,24 @@
 # Basic Questions to ask before building Microservice
 
+```markdown
 ```mermaid
 graph LR
     subgraph ClientLayer [Client & Gateway]
-        Client[Client Request] --> apiGateway{API Gateway}
+        Client[fa:fa-laptop Client Request] --> apiGateway{fa:fa-chart-network API Gateway}
     end
 
     subgraph Services [Microservices]
         direction TD
-        orderSvc[Order Service]
-        paymentSvc[Payment Service]
-        inventorySvc[Inventory Service]
+        orderSvc[fa:fa-cart-shopping Order Service]
+        paymentSvc[fa:fa-credit-card Payment Service]
+        inventorySvc[fa:fa-light-cube Inventory Service]
     end
 
     subgraph Databases [Databases]
         direction TD
-        ordersDB[(Orders DB)]
-        paymentsDB[(Payments DB)]
-        inventoryDB[(Inventory DB)]
+        ordersDB[fa:fa-database(Orders DB)]
+        paymentsDB[fa:fa-database(Payments DB)]
+        inventoryDB[fa:fa-database(Inventory DB)]
     end
 
     %% Connections from Gateway to Services
