@@ -99,10 +99,10 @@ Why should each service focus on a closely related set of responsibilities?
 
 ```mermaid
 graph LR
-    invSrc["📦 Inventory Service"] <-- mngInv[Manage inventory]
-    invSrc["📦 Inventory Service"] <-- updSt[Update Stock]
-    invSrc["📦 Inventory Service"] <-- trStMov[Track stock movements]
-    invSrc["📦 Inventory Service"] <-- relBusLog[Related Business Logic]
+    invSrc[("📦 Inventory Service")] <-- mngInv[Manage inventory]
+    invSrc[("📦 Inventory Service")] <-- updSt[Update Stock]
+    invSrc[("📦 Inventory Service")] <-- trStMov[Track stock movements]
+    invSrc[("📦 Inventory Service")] <-- relBusLog[Related Business Logic]
 ```
 
 ### 5. Database per Service
@@ -110,7 +110,7 @@ graph LR
 Why would each service own its data?
 
 ```mermaid
-    graph LR
+graph LR
     subgraph user[User Domain]
             direction TD
             userSvc[User Service] --> userDb[(DB)]
@@ -135,11 +135,11 @@ Can you deploy and  scale one service without affecting the others?
     graph LR
     subgraph user[User Domain]
             direction TD
-            userSvc[User Service] --> userblock
             block userblock
                 columns 3
                 a b c
             end
+            userSvc[User Service] --> userblock
         end
 
         subgraph order[Order Domain]
