@@ -79,9 +79,9 @@ How do you decide what belongs to each service?
 
 ```mermaid
 graph LR
-    ecApp[E-commerce Application] --> usrSrc["👤User Service(Users, Profiles)"]
-    ecApp[E-commerce Application] --> ordSrc["🛒Order Service(Orders, Cart)"]
-    ecApp[E-commerce Application] --> paySrc["💳Payment Service(Payments, Refunds)"]
+    ecApp[E-commerce Application] --> usrSrc["👤User Service<br>(Users, Profiles)"]
+    ecApp[E-commerce Application] --> ordSrc["🛒Order Servicee<br>(Orders, Cart)"]
+    ecApp[E-commerce Application] --> paySrc["💳Payment Servicee<br>(Payments, Refunds)"]
 ```
 
 ### 3. Loose Coupling
@@ -91,4 +91,64 @@ How do you minimize dependencies between services?
 ```mermaid
 graph LR
     srca[Service A] <-.->|Minimal dependency| srcb[Service B]
+```
+
+### 4. High Cohesion
+
+Why should each service focus on a closely related set of responsibilities?
+
+```mermaid
+graph LR
+    invSrc["📦 Inventory Service"] <-- mngInv[Manage inventory]
+    invSrc["📦 Inventory Service"] <-- updSt[Update Stock]
+    invSrc["📦 Inventory Service"] <-- trStMov[Track stock movements]
+    invSrc["📦 Inventory Service"] <-- relBusLog[Related Business Logic]
+```
+
+### 5. Database per Service
+
+Why would each service own its data?
+
+```mermaid
+    graph LR
+    subgraph user[User Domain]
+            direction TD
+            userSvc[User Service] --> userDb[(DB)]
+        end
+
+        subgraph order[Order Domain]
+            direction TD
+            orderSvc[Order Service] --> orderDb[(DB)]
+        end
+
+        subgraph payment[Payment Domain]
+            direction TD
+            paymentSvc[Payment Service] --> paymentDb[(DB)]
+        end
+```
+
+### 6. Independent Deployment & Scaling
+
+Can you deploy and  scale one service without affecting the others? 
+
+```mermaid
+    graph LR
+    subgraph user[User Domain]
+            direction TD
+            userSvc[User Service] --> userblock
+            block userblock
+                columns 3
+                a b c
+            end
+        end
+
+        subgraph order[Order Domain]
+            direction TD
+            orderSvc[Order Service] --> orderDb[(DB)]
+        end
+
+        subgraph payment[Payment Domain]
+            direction TD
+            paymentSvc[Payment Service] --> paymentDb[(DB)]
+        end
 ```
