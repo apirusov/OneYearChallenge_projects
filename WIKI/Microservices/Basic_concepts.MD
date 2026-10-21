@@ -110,7 +110,7 @@ graph LR
 Why would each service own its data?
 
 ```mermaid
-graph LR
+graph TD
     subgraph user[User Domain]
             direction TD
             userSvc[User Service] --> userDb[(DB)]
@@ -132,7 +132,7 @@ graph LR
 Can you deploy and  scale one service without affecting the others?
 
 ```mermaid
-    graph LR
+    graph TD
     subgraph user[User Domain]
             direction TD
             userSvc[User Service] --> userblock
