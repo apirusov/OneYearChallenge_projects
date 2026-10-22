@@ -159,7 +159,7 @@ graph LR
     srca[Service A] <-->❌ srcb[Service B]
 ```
 
-### 💡Key insight
+### 8.💡Key insight
 
 Splitting an application into multiple servicees **doesnt automatically** make it a good microservices architecture.
 ***Good service boundaries matter more than the number of services.***
@@ -226,3 +226,40 @@ graph LR
     ordSrc[Order Service] <-->[3. Call one of the instances (via load balancer)] paySrcInst[Payment Services Instances]
     paySrcInst[Payment Services Instances] -->[2. Returns available instances] srcRegDb[Service Registry]
 ```
+
+### 4. Load Balancing
+
+How are requests distributed across multiple instances of a service?
+
+```mermaid
+graph LR
+    apiGateway{"🌐 API Gateway"} --> loadBal[Load Balancer<br>Round Robin / Last Connection]
+    subgraph instances[Service Instances]
+    direction TD
+        ordIp[10.0.2.8:8080]
+        payIp[10.0.2.9:8080]
+        invIp[10.0.2.10:8080]
+    end
+    loadBal[Load Balancer<br>Round Robin / Last Connection] --> ordIp[10.0.2.8:8080]
+    loadBal[Load Balancer<br>Round Robin / Last Connection] --> ordIp[10.0.2.9:8080]
+    loadBal[Load Balancer<br>Round Robin / Last Connection] --> ordIp[10.0.2.10:8080]
+```
+
+### 5. Health Checks
+
+How do we identify unhealthy service instances and avoid routing traffic to them?
+
+```mermaid
+graph LR
+    subgraph instances[Service Instances]
+    direction TD
+        ordIp[10.0.2.8:8080] theme: forest
+        payIp[10.0.2.9:8080] theme: #BB2528
+        invIp[10.0.2.10:8080] theme: forest
+    end
+    💓 -->[Periodic health checks]ordIp[10.0.2.8:8080 ✅]
+    💓 -->[Periodic health checks]payIp[10.0.2.9:8080 ❌]
+    💓 -->[Periodic health checks]invIp[10.0.2.10:8080 ✅]
+```
+
+### 6. 💡Key insight
